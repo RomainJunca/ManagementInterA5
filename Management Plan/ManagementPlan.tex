@@ -13,6 +13,21 @@
 \usepackage{pdfpages}
 \usepackage{rotating}
 \usepackage{xspace}
+\usepackage{titlesec}
+\usepackage{roboto}
+
+\definecolor{title-color}{gray}{0.30}
+
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{5pt}
+
+\titleformat{\section}
+  {\clearpage\normalfont\sffamily\Huge\bfseries\centering\robotoslab\color{title-color}}
+  {}{0pt}{\bigskip}
+
+\titleformat{\subsection}
+  {\normalfont\sffamily\LARGE\bfseries\robotoslab\color{title-color}}
+  {\thesubsection}{1em}{}
 
 \begin{document}
 
@@ -20,11 +35,11 @@
 \begin{figure}
 \end{figure}
 
-\title{\vspace{1cm}{\Huge \bf{Management Project} } \\ \vspace{2cm} \bf{Mold \& Co in China} \vspace{1cm} \\
+\title{\vspace{1cm}{\Huge \bf{\color{title-color}\robotoslab Management Project} } \\ \vspace{2cm} \bf{\color{title-color}\robotoslab Mold \& Co in China} \vspace{1cm} \\
 }
 \begin{figure}
 \begin{center}
-\includegraphics[scale = 0.5]{Img/china-illustration.jpg}
+\includegraphics[scale = 0.2]{Img/china-illustration.jpg}
 \end{center}
 \end{figure}
 \author{\Large{Marie \bsc{Chiaverini}} \Large{Baptiste  \bsc{Saclier}} \\\Large{Vadim  \bsc{Crochet}} \Large{Antoine  \bsc{Caillet}} \\\Large{Romain  \bsc{Junca}}}
@@ -38,17 +53,17 @@
 \setcounter{page}{0}
 \newpage
 
-\renewcommand{\contentsname}{\Huge{Table of contents}}
+\renewcommand{\contentsname}{Table of contents}
 \tableofcontents
 
 \newpage
-\renewcommand{\listfigurename}{\Huge{List of figures}}
+\renewcommand{\listfigurename}{List of figures}
 \listoffigures
 
 \newpage
 
 \newcommand{\projectname}{ChineseTooth\xspace}
-\newcommand{\modco}{MOLD \& Co.\xspace}
+\newcommand{\moldco}{MOLD \& Co.\xspace}
 
 \section{Introduction}
 
@@ -65,18 +80,7 @@ In this document, we describe what are the goals, the processes, the planning an
 % Quels sont les contraintes (Environnement, Social, Temps, Législation) ?
 % Quels sont les forces et les faiblesses ?
 
-The main goal is to install a toothbrush production line in the eco-city of Taijin in China.
-Our company is workig for \moldco to make this production line a reality.
-
-Ou main guidelines in this project is to install a production line that can produce a great amount of toothbrushes within an eco-city.
-This project needs to be respectful of the surrounding environnement and social aspects of the project's stakeholders.
-
-\subsection{Specifications}
-
-This project have to achieve the following specifications.
-
-\paragraph{Full toothbrush production line} The production line must contains all the required machines to automate the production of toothbrushes.
-Theses machines includes moulting machine, Stamping machine, Tufting machine, bristle cutter machine, bristle trimming machine and Packaging machine.
+\input{project-description.tex}
 
 \section{Actors and Stakeholders}
 
@@ -102,6 +106,7 @@ Theses machines includes moulting machine, Stamping machine, Tufting machine, br
 % Quels sont les moyens materiel requis ?
 
 \section{Risks management}
+\label{risk-management}
 
 % Quels sont les risques encourus durant le projet ?
 % Quel est la sévérité, la probabilité d'apparition ?
