@@ -1,42 +1,27 @@
-In order to deal with the risk management, we decided to use the FMECA (Failure Mode, Effects, Criticality, Analysis) Method on the means of production of\moldco company. This means that we consider all the risks related to the operation of the assembly line system.\\
+Considering that \moldco 's new production plant implies an important complex system, we have to identify and evaluate all the risks inherent to this system in order to limit them the most possible. This risk analysis will allow us to help designing the new production system by establishing the most efficient preventive and correctives measures.\\
 
-For that purpose, we have, to as a first step, to describe the system. Then we will be able to identify all the threats. After this step, we will identify all the threats that could affects the system and assess them in order to define their criticality.\\
+In order to deal with the risk management, we decided to use the FMECA Method on the means of production of \moldco company. This means that we consider all the risks related to the operation of the assembly line system.\\
+
+\subsection{Plan}
+
+For that purpose, we have to, as a first step, describe the overall production system. Then we will be able to identify all the threats. After this step, we will identify all the threats that could affects the system and assess them in order to define their criticality.
 Ultimately, we will see how to compensate these eventual failure modes where appropriate.\\
 
 \subsection{Description of the system}
 
-The assembly line system is composed of two main parts : 
-\begin{itemize}
-    \item the mechanical system
-    \item and the computing's one.\\
-\end{itemize}
-
-By the way, we estimate that these two systems are interdependent. In orther words, we have to take into account that if the mechanical part of the assembly line fails, the entire system cannot work anymoer and vice versa.\\
-Actually, mechanical part of the production chain can work independently but if the computing system is not working, the mechanical will get problems about its regulation and monitoring.\\
+The assembly line system is composed of two main parts : the mechanical system and the computing's one.
+By the way, we estimate that htese two systems are interdependant. In other words, we have to take into account that if the mechanical part of the assembly line fails, the entire system cannot work anymore and vice versa.\\
+Actually, mechanical part of the production chain can work independdently but if the computing system is not working, the mechanical will encounter problems about its regulation and monitoring.\\
 
 \begin{figure}[h]
     \centering
-    \begin{tabular}{| p{4cm} | c | c | c | c | c | c | c | c | c |}
-        \hline
-        \rowcolor{heading-color}\multicolumn{1}{|c|}{Failure mode} & Failure causes & Failure effect & Detection method & Corrective actions & Severity & Occurrence & Detection & Criticality & RPN\\
-        \hline
-        Power outage & ? & Stop the production & Beep & Beep & 5 & 1 & 1 & 5 & 5 \\
-        \hline
-        Noise pollution & Mechanical disruption & Employee's discomfort & Error message & Automatic measurement & 1 & 2 & 2 & 2 & 4 \\
-        \hline
-        Inherent materiel defect & Obsolescence & Slowdown or stop the production & Error message & Periodic maintenance & 5 & 2 & 1 & 10 & 10 \\
-        \hline
-        Earthquake & Environment & Stop the production &  &  &  &  &  &  &  \\
-        \hline
-        Fire & Overheat & Stop the production &  &  &  &  &  &  &  \\
-        \hline
-        Flood &  & Stop the production &  &  &  &  &  &  &  \\
-        \hline
-    \end{tabular}
-    \caption{FMECA Method}
-    \end{figure}
+    \includegraphics{Img/description-system.png}
+    \caption{Description of the system}
+\end{figure}
 
-According to the FMECA MEthod, we have to assess two different values in the table of risk.\\
+\subsection{Definition of risk assessment}
+
+According to the FMECA MEthod, we have to assess three different values in the table of risk.\\
 
 First of all, the Severity (S) which equals to the importance of the consequences that the risk could induce on the production of the factory. More the risk can affect the production line, more the Severity level is high as the following table shows :
 
@@ -60,7 +45,7 @@ First of all, the Severity (S) which equals to the importance of the consequence
     \caption{Table of severity level}
 \end{figure}
 
-    Regarding the Occurrence (O), it enables to measure the likelihood of the risk. Mire the risk is potential, more the Occurrence value is high as we can see as below :
+Then we have to assess the Occurrence (O) of the risks. The occurrence enables us to measure the likelihood of the risk. Mire the risk is potential, more the Occurrence value is high as we can see as below :
 
     \begin{figure}[h]
         \centering
@@ -82,7 +67,7 @@ First of all, the Severity (S) which equals to the importance of the consequence
         \caption{Table of occurence level}
 \end{figure}
 
-Finally, the Detection (D) is measured according to the ease for the operators to discover a failure mode. Higher the value is, easier it is to detect the failure.
+Finally, the Detection (D) is measured according to the ease for the operators to discover a failure mode. As we can see on the below table, higher the value is, harder it is to detect the issue.
 
 \begin{figure}[h]
     \centering
@@ -104,7 +89,9 @@ Finally, the Detection (D) is measured according to the ease for the operators t
     \caption{Table of detection level}
 \end{figure}
 
-Severity, Occurrence and Detection are arbitrarily assessed whereas Criticality and RPN are calculated from these same data.\\
+\subsection{Calculation of the criticality and risk priority numbers}
+
+In sum, Severity, Occurrence and Detection are arbitrarily assessed whereas Criticality and RPN are calculated from these same data.\\
 
 Especially, we have the following relations :
 \begin{itemize}
@@ -114,8 +101,81 @@ Especially, we have the following relations :
 
 These last two measures enable us to prioritize the risk in order to make the further effort in order to limit them and eventually resolve them if ever they occur.
 
-\includegraphics{Img/img-risk.png}
+\begin{figure}[h]
+    \centering
+    \includegraphics{Img/severity-occurrence.png}
+    \caption{Risk Priority Number}
+\end{figure}
 
-\subsection{Identification of the risks}
-\subsubsection{Categorization of the risk}
-\subsection{Enhancement of the assembly line function}
+After having defined all the measure required in order to assess the risks. We can now list them, evaluate their Severity (S), Occurence (O), Detection (D) and thus calculate for each one, their Criticality (C) and their Risk Priority Number (RPN)
+
+\begin{figure}[h]
+    \centering
+    \begin{tabular}{| p{4cm} | c | c | c | c | c | c | c | c | c | c |}
+        \hline
+        \rowcolor{heading-color}\multicolumn{1}{|c|}{Identifier} & Failure mode & Failure causes & Failure effect & Detection method & Corrective actions & Severity & Occurrence & Detection & Criticality & RPN\\
+        \hline
+        A & Power outage & Equipment disfunction & Stop the production & Beep & Inverter and external batteries & 5 & 4 & 1 & 2 & 2 \\
+        \hline
+        B & Noise pollution & Equipment disruption & Employee's discomfort & Error message & Automatic measurement and earplugs & 1 & 2 & 2 & 2 & 4 \\
+        \hline
+         C & Inherent materiel defect & Obsolescence & Slowdown or stop the production & Error message & Periodic maintenance & 5 & 4 & 2 & 2 & 4 \\
+        \hline
+        D & Earthquake & Environment & Stop the production & Sound and tremors & Earthquake protection & 4 & 1 & 1 & 4 & 4 \\
+        \hline
+        E & Fire & Overheat & Stop the production & Beep (fire alarm), flames & Fire prevention system & 4 & 1 & 1 & 4 & 4 \\
+        \hline
+        F & Lack of raw materials & Desynchronization & Stop the production & Alert message & Prodivder proximity / daily stock's review & 4 & 2 & 1 & 8 & 7 \\
+        \hline
+        G & Short circuit & Human error / Equipment disfunction & Slowdown or stop the production & Alert message & Circuit-breakers & 4 & 3 & 1 & 1 & 1 \\
+        \hline
+        H & Absence of a main operator & Sickness / leave & Relative stop the production & Control presence of the employees & Control presence of the employees & 3 & 4 & 1 & 1 & 1 \\
+        \hline
+        I & Local network outage & Broken cable & Stop the production & Error message & Network connection & 5 & 5 & 1 & 2 & 2 \\
+        \hline
+        J & Lightning & Environment & None & Lightning sound & Lightning rod & 1 & 1 & 1 & 1 & 1 \\
+        \hline
+        K & Flood & Water leak & Eventual stop of the production & Leak detectors & Water recycling system & 2 & 3 & 1 & 6 & 6 \\
+        \hline
+        L & Over-voltage & Surge / Insulation failure & Stop the production & Alert message & Circuit-breakers & 4 & 2 & 1 & 8 & 8 \\
+        \hline
+        H & Absence of a main operator & Sickness / leave & Relative stop the production & Control presence of the employees & Control presence of the employees & 3 & 4 & 1 & 1 & 1 \\
+        \hline
+        M & Vandalism & Human error & Slowdown or stop the production & Cameras & Cameras / Intern investigation & 4 & 2 & 2 & 8 & 1 \\
+        \hline
+        N & Overload & Equipment dysfunction (disruption) & Slowdown or stop the production & Error message & Regular control of the quipment's settings & 4 & 3 & 2 & 1 & 2 \\
+        \hline
+        O & Production quality defect & Human error & Slowdown of the production & Block of the equipment & Regular quality controlss & 2 & 3 & 1 & 6 & 6 \\
+        \hline
+        P & Environmental pollution & Equipment dysfunction (disruption) & No respect of CSR / Penalty & Complain / Pollution traces & Regular analysis on the water and other resources & 3 & 3 & 3 & 9 & 2 \\
+        \hline
+        Q & Non respect of deadlines & Wrong estimation of the delays & Economic losses & Project management & Recursive estimation & 3 & 5 & 2 & 1 & 3 \\
+        \hline
+        R & Employee's injury & Accident & Eventual slowdown of the production & Complain & None & 3 & 1 & 1 & 3 & 3 \\
+        \hline
+    \end{tabular}
+    \caption{FMECA Method}
+    \end{figure}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics{Img/rpn-calculation.png}
+        \caption{RPN calculation}
+    \end{figure}
+
+\subsection{Prevention and correction of the risks}
+
+What we can conclude from this table is that four risks : A, C, I and Q are particularly important as their criticality is in the red color so high priority.
+Then we have to pay a special attention to these one and foresee strong corrective actions in order not only for prevention but also for correction.\\
+
+Particularly, for these risk we decided to :
+\begin{description}
+    \item[Power outage (A)]: provide external batteries while the failure is not resolved.
+    \item[Inherent material defect (C)]: plan periodic maintenance on all the different machine consisting in verifying all its functionalities.
+    \item[Local network outage (I)]: foresee a double connection on the machines for the local network so that if one is defaulting, the other will relay the connection.
+    \item[Non respect of the dealines (Q)]: 
+    \begin{itemize}
+        \item foresee provisional timeline of 10\% of the time required to achieve the project.
+        \item daily checks of the projects progress
+    \end{itemize}
+\end{description}
