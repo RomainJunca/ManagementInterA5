@@ -16,6 +16,9 @@
 \usepackage{titlesec}
 \usepackage{colortbl}
 \usepackage{roboto}
+\usepackage{pdfpages}
+\usepackage{lscape}
+\usepackage{longtable}
 
 \definecolor{title-color}{gray}{0.30}
 \definecolor{heading-color}{gray}{0.90}
@@ -41,7 +44,7 @@
 \begin{figure}
 \end{figure}
 
-\title{\vspace{1cm}{\Huge \bf{\color{title-color}\robotoslab Management Project} } \\ \vspace{2cm} \bf{\color{title-color}\robotoslab Mold \& Co in China} \vspace{1cm} \\
+\title{\vspace{1cm}{\Huge \bf{\color{title-color}\robotoslab Management Plan} } \\ \vspace{2cm} \bf{\color{title-color}\robotoslab Mold \& Co in China} \vspace{1cm} \\
 }
 \begin{figure}
 \begin{center}
@@ -116,7 +119,7 @@ In this document, we describe what are the goals, the processes, the planning an
 % Quels sont les moyens financiers requis ?
 % Quels sont les moyens materiel requis ?
 
-\input{required-resources}
+%\input{required-resources}
 
 \section{Risks management plan}
 \label{risk-management}
@@ -135,7 +138,14 @@ In this document, we describe what are the goals, the processes, the planning an
 
 \section{Conclusion} 
 
+In this document, we described the action plan, risks and planning. 
+This project will lead to the a full assembly line installation in \moldco new toothbrush factory.
 
+\section{Annex 1 : Project Gantt diagram}
+
+You can found our Gantt project in the following pages.
+
+\includepdf[pages=-]{gantt.pdf}
 
 \end{document}
 
